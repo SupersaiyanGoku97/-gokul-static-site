@@ -3,8 +3,7 @@ pipeline {
     stages {
         stage('Clone Repository') {
             steps {
-                git 'https://github.com/SupersaiyanGoku97/-gokul-static-site.git'
-            }
+                git branch: 'main', url: 'https://github.com/SupersaiyanGoku97/-gokul-static-site.git'            }
         }
         stage('Upload to S3') {
             steps {
